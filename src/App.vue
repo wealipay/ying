@@ -1,5 +1,8 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+alert(import.meta.env.VITE_user)
+alert(import.meta.env.VITE_age)
+
 </script>
 
 <template>
