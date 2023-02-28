@@ -1,5 +1,5 @@
 <template>
-yelloe666
+yelloe666gg
 <img :src="getLmg('白夜行.png')">
 {{getLmg('白夜行.png')}}
 </template>
