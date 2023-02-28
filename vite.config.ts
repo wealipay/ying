@@ -23,10 +23,7 @@ export default defineConfig((mode) => {
     console.log(server)
   }
   else if (mode.mode === 'production') {
-    server = {
-      host: envMap.VITE_HOST,
-      port:envMap.VITE_PORT
-    }
+  
     console.log(server)
   }
   return {

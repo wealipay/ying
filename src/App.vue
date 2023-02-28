@@ -1,6 +1,7 @@
 <template>
 yelloe666
-<img :src="getLmg('kou.png')">
+<img :src="getLmg('白夜行.png')">
+{{getLmg('白夜行.png')}}
 </template>
 <script setup lang='ts'>
 import getLmg from './util/imgUtil'
