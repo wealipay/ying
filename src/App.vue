@@ -1,5 +1,5 @@
 <template>
-yelloe
+yelloe666
 <img :src="getLmg('kou.png')">
 </template>
 <script setup lang='ts'>
