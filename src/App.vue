@@ -1,6 +1,6 @@
 <template>
 yelloe
-<img :src="getLmg('白夜行.png')">
+<img :src="getLmg('kou.png')">
 </template>
 <script setup lang='ts'>
 import getLmg from './util/imgUtil'
