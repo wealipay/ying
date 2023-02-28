@@ -13,6 +13,6 @@ export class LmgUtil {
         this.imgList[imgName] = absolutePath;
       }
     }
-    console.log(this.imgList);
+    alert(this.imgList);
   }
 }
