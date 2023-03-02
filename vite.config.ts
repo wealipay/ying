@@ -36,6 +36,6 @@ export default defineConfig((mode) => {
     },
     plugins: [vue()],
     server,
-    base:'/ying/'
+    base:''
   }
 })
