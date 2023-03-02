@@ -4,7 +4,6 @@ import fs from 'fs'
 import path from 'path'
 import dotenv,{DotenvParseOutput} from 'dotenv'
 import { env } from 'process'
-import { pathToFileURL } from 'url'
 
 export default defineConfig((mode) => {
   const envFileName: string = '.env'
@@ -36,6 +35,6 @@ export default defineConfig((mode) => {
     },
     plugins: [vue()],
     server,
-    base:''
+    base: ''
   }
 })
