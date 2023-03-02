@@ -1,8 +1,10 @@
 import { defineConfig,CommonServerOptions } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import fs from 'fs'
+import path from 'path'
 import dotenv,{DotenvParseOutput} from 'dotenv'
 import { env } from 'process'
+import { pathToFileURL } from 'url'
 
 export default defineConfig((mode) => {
   const envFileName: string = '.env'
@@ -27,7 +29,13 @@ export default defineConfig((mode) => {
     console.log(server)
   }
   return {
+    resolve: {
+      alias: {
+        '@':path.join(__dirname,'/src')
+      }
+    },
     plugins: [vue()],
-    server
+    server,
+    base:'/ying/'
   }
 })
