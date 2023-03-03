@@ -35,6 +35,17 @@ export default defineConfig((mode) => {
     },
     plugins: [vue()],
     server,
-    base: ''
+    base: './',
+    build:{
+    assetsDir:'assets/img',
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'js/[name]-[hash].js', // 分类输出
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: '[ext]/[name].[ext]'
+      }
+    }
+    }
+
   }
 })
