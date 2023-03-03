@@ -1,8 +1,8 @@
 <template>
-yelloe666gg颖
-<img :src="getLmg('图书馆.png')">
-{{getLmg('kou.png')}}
+  yelloe666gg颖
+  <img :src="getLmg">
 </template>
-<script setup lang='ts'>
-import getLmg from './util/imgUtil'
+<script setup lang="ts">
+import getLmg from '@/assets/img/books/electronics/白夜行.png'
+
 </script>
