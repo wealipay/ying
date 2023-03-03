@@ -1,5 +1,5 @@
 <template>
-yelloe666gg
+yelloe666gg颖
 <img :src="getLmg('图书馆.png')">
 {{getLmg('kou.png')}}
 </template>

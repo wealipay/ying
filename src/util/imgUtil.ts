@@ -4,9 +4,10 @@ export class LmgUtil {
     const imgMap = import.meta.globEager("@/assets/img/**/*.png");
     let absolutePath: string = "";
     let imgName: string = "";
+    let imgAdress: string = "";
     for (const relativePath in imgMap) {
       absolutePath = imgMap[relativePath].default;
-      
+
       if (absolutePath) {
         imgName = absolutePath.substring(absolutePath.lastIndexOf("/") + 1);
         this.imgList[imgName] = absolutePath;
