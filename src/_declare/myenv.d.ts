@@ -1,5 +1,5 @@
 import 'dotenv'
-declare module 'dotenv' {
+declare module dotenv{
     export interface DotenvParseOutput{
         VITE_HOST: string,
         VITE_PORT: number,

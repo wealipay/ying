@@ -7,6 +7,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "-": "^0.0.1",
+    "@types/good-storage": "^1.1.0",
+    "D": "^1.0.0",
     "dotenv": "^16.0.3",
     "good-storage": "^1.1.1",
     "vue": "^3.2.45"

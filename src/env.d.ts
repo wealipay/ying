@@ -7,7 +7,7 @@ declare module "*.vue" {
   export default component;
 }
 
-interface ImportMetaEnv {
-  VITE_user: string;
-  VITE_age: number;
+interface ImportMetaEnv{
+  VITE_user:string,
+  VITE_age:number
 }

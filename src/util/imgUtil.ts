@@ -1,24 +1,38 @@
+import goodStorage from 'good-storage'
+
+
 export class LmgUtil {
   static imgList: Record<string, string> = {};
+  
+
+  static storageLmgList() {
+    this.imgList=goodStorage.get('imgList') ||{}
+    if (this.isEmpty()) {
+      this.loadAllLmg()
+      goodStorage.set('imgList',this.imgList)
+    }
+  }
+
+  static isEmpty() {
+    return !Object.getOwnPropertyNames(this.imgList).length
+  }
+
   static loadAllLmg() {
-    const imgMap = import.meta.globEager("@/assets/img/**/*.png");
     let absolutePath: string = "";
     let imgName: string = "";
-    let imgAdress: string = "";
-    for (const relativePath in imgMap) {
-      absolutePath = imgMap[relativePath].default;
-
+    const imgMap = import.meta.globEager("../assets/img/**/*.png");
+    for (let relativePath in imgMap) {
+      absolutePath = imgMap[relativePath].default
       if (absolutePath) {
-        imgName = absolutePath.substring(absolutePath.lastIndexOf("/") + 1);
-        this.imgList[imgName] = absolutePath;
+        imgName = absolutePath.substring(absolutePath.lastIndexOf('/') + 1)
+        this.imgList[imgName] = absolutePath
       }
     }
   }
-  static isEmpty() {
-    return !Object.getOwnPropertyNames(this.imgList).length;
-  }
+
   static getLmg(imgName: string) {
-    return LmgUtil.imgList[imgName];
+    return LmgUtil.imgList[imgName]
   }
 }
-export default LmgUtil.getLmg;
+
+export default LmgUtil.getLmg
