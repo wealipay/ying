@@ -2,21 +2,30 @@
   "name": "vite",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --open",
+    "dev": "nodemon --watch src/ -e ts --exec ts-node ./src/app.ts",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "-": "^0.0.1",
-    "@types/good-storage": "^1.1.0",
-    "D": "^1.0.0",
+    "@types/koa": "^2.13.5",
+    "@types/koa-json": "^2.0.20",
+    "@types/koa-router": "^7.4.4",
+    "@types/mysql": "^2.15.21",
     "dotenv": "^16.0.3",
     "good-storage": "^1.1.1",
+    "koa": "^2.14.1",
+    "koa-body": "^6.0.1",
+    "koa-json": "^2.0.2",
+    "koa-router": "^12.0.0",
+    "mysql": "^2.18.1",
+    "ts-node": "^10.9.1",
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "@types/good-storage": "^1.1.0",
     "@types/node": "^18.14.2",
     "@vitejs/plugin-vue": "^4.0.0",
+    "nodemon": "^2.0.21",
     "typescript": "^4.9.5",
     "vite": "^4.1.0",
     "vue-tsc": "^1.2.0"
